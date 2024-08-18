@@ -28,4 +28,8 @@ describe("StringCalculator", () => {
   it("should support different delimiters", () => {
     expect(add("//;\n1;2")).toBe(3);
   });
+
+  it("should handle an unknown amount of numbers", () => {
+    expect(add("1,2,3,4,5")).toBe(15);
+  });
 });
