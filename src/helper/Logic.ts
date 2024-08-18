@@ -3,8 +3,8 @@ export function add(numbers: string): number {
 
   if (numbers.length === 1) return parseInt(numbers);
 
-  //removing \n and , from the input string
-  let str = numbers.replace(/[\n,\s]/g, "");
+  //removing \n , alphbets, spaces and , from the input string
+  let str = numbers.replace(/[\n,\sa-zA-z]/g, "");
 
   if (str.includes("-")) {
     const negativeNumbers = str.match(/-\d/g)?.join(", ");
