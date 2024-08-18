@@ -11,6 +11,17 @@ export function add(numbers: string): number | string {
     throw new Error(`negative numbers not allowed ${negativeNumbers}`);
   }
 
+  if (numbers.startsWith("//")) {
+    str = str.replace("//", "");
+    const delimiter = str.match(/\D/);
+
+    return str
+      ?.split(!delimiter?.length ? "" : delimiter[0])
+      .filter((e) => e !== null && e !== "")
+      .map((e) => parseInt(e))
+      .reduce((a, b) => a + b);
+  }
+
   return str
     .split("")
     .map((e) => parseInt(e))
