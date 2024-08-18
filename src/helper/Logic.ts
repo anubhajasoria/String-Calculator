@@ -4,7 +4,7 @@ export function add(numbers: string): number {
   if (numbers.length === 1) return parseInt(numbers);
 
   //removing \n , alphbets, spaces and , from the input string
-  let str = numbers.replace(/[\n,\sa-zA-z]/g, "");
+  let str = numbers.replace(/[\n,\sa-zA-Z]/g, "");
 
   if (str.includes("-")) {
     const negativeNumbers = str.match(/-\d/g)?.join(", ");
