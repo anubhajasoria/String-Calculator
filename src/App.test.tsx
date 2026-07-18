@@ -10,7 +10,7 @@ describe("StringCalculator", () => {
   });
 
   it("should return the sum of two numbers", () => {
-    expect(add("15")).toBe(6);
+    expect(add("1,5")).toBe(6);
   });
 
   it("should handle new lines between numbers", () => {
